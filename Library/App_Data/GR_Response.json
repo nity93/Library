@@ -1,0 +1,991 @@
+﻿{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "UTF-8"
+  },
+  "GoodreadsResponse": {
+    "Request": {
+      "authentication": "true",
+      "key": {
+        "#cdata-section": "8HbMIGP0GnHlxaj47M5c8Q"
+      },
+      "method": {
+        "#cdata-section": "search_search"
+      }
+    },
+    "search": {
+      "query": {
+        "#cdata-section": "The Hobbit"
+      },
+      "results-start": "1",
+      "results-end": "20",
+      "total-results": "536",
+      "source": "Goodreads",
+      "query-time-seconds": "0.20",
+      "results": {
+        "work": [
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "1540236"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "920"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "2052092"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "35657"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1937"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "9"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "21"
+            },
+            "average_rating": "4.24",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "5907"
+              },
+              "title": "The Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "656983"
+                },
+                "name": "J.R.R. Tolkien"
+              },
+              "image_url": "https://images.gr-assets.com/books/1372847500m/5907.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1372847500s/5907.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "16998382"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "44"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "159939"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "932"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1989"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "average_rating": "4.48",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "659469"
+              },
+              "title": "The Hobbit: Graphic Novel",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "28709"
+                },
+                "name": "Chuck Dixon"
+              },
+              "image_url": "https://images.gr-assets.com/books/1374681632m/659469.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1374681632s/659469.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "1068303"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "3"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "85993"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "35"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2007"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "5"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "3.80",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "1081560"
+              },
+              "title": "The History of the Hobbit, Part One: Mr. Baggins",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "42158"
+                },
+                "name": "John D. Rateliff"
+              },
+              "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+              "small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "89369"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "67"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "90404"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "1533"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1973"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.59",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "30"
+              },
+              "title": "J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "656983"
+                },
+                "name": "J.R.R. Tolkien"
+              },
+              "image_url": "https://images.gr-assets.com/books/1346072396m/30.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1346072396s/30.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "18557150"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "5"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "1749"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "126"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.21",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "13343283"
+              },
+              "title": "Exploring J.R.R. Tolkien's The Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "5403927"
+                },
+                "name": "Corey Olsen"
+              },
+              "image_url": "https://images.gr-assets.com/books/1344482651m/13343283.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1344482651s/13343283.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "16827542"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "10"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "2664"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "56"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2011"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "10"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.32",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "11870160"
+              },
+              "title": "The Art of The Hobbit by J.R.R. Tolkien",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "9498"
+                },
+                "name": "Wayne G. Hammond"
+              },
+              "image_url": "https://images.gr-assets.com/books/1322352371m/11870160.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1322352371s/11870160.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "120725"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "15"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "331"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "23"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1997"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.05",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "125353"
+              },
+              "title": "The \"Hobbit\" Companion",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "4945"
+                },
+                "name": "David Day"
+              },
+              "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+              "small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "21603852"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "4118"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "78"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "11"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.57",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "15854616"
+              },
+              "title": "The Hobbit: An Unexpected Journey - Chronicles I: Art & Design",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "3081691"
+                },
+                "name": "Daniel Falconer"
+              },
+              "image_url": "https://images.gr-assets.com/books/1346547781m/15854616.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1346547781s/15854616.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "42745956"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "93"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "14"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "average_rating": "4.52",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "16153536"
+              },
+              "title": "The Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "656983"
+                },
+                "name": "J.R.R. Tolkien"
+              },
+              "image_url": "https://images.gr-assets.com/books/1353104029m/16153536.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1353104029s/16153536.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "20487307"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "15"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "1580"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "68"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "11"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "average_rating": "4.41",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "14833682"
+              },
+              "title": "The Hobbit: An Unexpected Journey - Visual Companion",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "10"
+                },
+                "name": "Jude Fisher"
+              },
+              "image_url": "https://images.gr-assets.com/books/1346542140m/14833682.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1346542140s/14833682.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "19363885"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "14"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "2444"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "58"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.46",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "13730598"
+              },
+              "title": "The Hobbit: An Unexpected Journey - Official Movie Guide",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "4941"
+                },
+                "name": "Brian Sibley"
+              },
+              "image_url": "https://images.gr-assets.com/books/1346542373m/13730598.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1346542373s/13730598.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "21528878"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "7"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "98"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "14"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "11"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "average_rating": "3.90",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "15804984"
+              },
+              "title": "The Hobbit: An Unexpected Journey - The World of Hobbits",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "6164501"
+                },
+                "name": "Paddy Kempshall"
+              },
+              "image_url": "https://images.gr-assets.com/books/1346542574m/15804984.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1346542574s/15804984.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "24907818"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "2"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "31"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "4"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2014"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "11"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "4"
+            },
+            "average_rating": "4.26",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "17805619"
+              },
+              "title": "The Hobbit and History: [The Hobbit: The Battle of the Five Armies Movie Tie-In]",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "3929756"
+                },
+                "name": "Janice Liedl"
+              },
+              "image_url": "https://images.gr-assets.com/books/1415583939m/17805619.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1415583939s/17805619.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "2963669"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "3"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "142"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "3"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1999"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "10"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "4"
+            },
+            "average_rating": "4.29",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "5911"
+              },
+              "title": "Poems From The Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "656983"
+                },
+                "name": "J.R.R. Tolkien"
+              },
+              "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+              "small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "21543565"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "46"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "15"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "10"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.00",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "13777887"
+              },
+              "title": "The Spiritual World of the Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "81080"
+                },
+                "name": "James Stuart Bell Jr."
+              },
+              "image_url": "https://images.gr-assets.com/books/1374634243m/13777887.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1374634243s/13777887.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "963660"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "3"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "1114"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "15"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2007"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "18"
+            },
+            "average_rating": "4.33",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "978772"
+              },
+              "title": "The History of the Hobbit, Part Two: Return to Bag-End",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "42158"
+                },
+                "name": "John D. Rateliff"
+              },
+              "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+              "small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "71945"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "6"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "439"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "8"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "1995"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "@nil": "true"
+            },
+            "average_rating": "4.33",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "74372"
+              },
+              "title": "There and Back Again: The Map of the Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "4941"
+                },
+                "name": "Brian Sibley"
+              },
+              "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+              "small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "23569199"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "5"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "1030"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "27"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2013"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "4"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.55",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "17151982"
+              },
+              "title": "The Hobbit: An Unexpected Journey - Chronicles II: Creatures & Characters",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "3081691"
+                },
+                "name": "Daniel Falconer"
+              },
+              "image_url": "https://images.gr-assets.com/books/1356928189m/17151982.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1356928189s/17151982.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "19964957"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "5"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "141"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "27"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "10"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.11",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "14323138"
+              },
+              "title": "The Christian World of the Hobbit",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "117931"
+                },
+                "name": "Devin Brown"
+              },
+              "image_url": "https://images.gr-assets.com/books/1390432767m/14323138.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1390432767s/14323138.jpg"
+            }
+          },
+          {
+            "id": {
+              "@type": "integer",
+              "#text": "18584544"
+            },
+            "books_count": {
+              "@type": "integer",
+              "#text": "5"
+            },
+            "ratings_count": {
+              "@type": "integer",
+              "#text": "218"
+            },
+            "text_reviews_count": {
+              "@type": "integer",
+              "#text": "35"
+            },
+            "original_publication_year": {
+              "@type": "integer",
+              "#text": "2012"
+            },
+            "original_publication_month": {
+              "@type": "integer",
+              "#text": "9"
+            },
+            "original_publication_day": {
+              "@type": "integer",
+              "#text": "1"
+            },
+            "average_rating": "4.27",
+            "best_book": {
+              "@type": "Book",
+              "id": {
+                "@type": "integer",
+                "#text": "13357020"
+              },
+              "title": "A Hobbit Devotional: Bilbo Baggins and the Bible",
+              "author": {
+                "id": {
+                  "@type": "integer",
+                  "#text": "24013"
+                },
+                "name": "Ed Strauss"
+              },
+              "image_url": "https://images.gr-assets.com/books/1340572026m/13357020.jpg",
+              "small_image_url": "https://images.gr-assets.com/books/1340572026s/13357020.jpg"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

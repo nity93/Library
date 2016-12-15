@@ -1,0 +1,72 @@
+﻿@model Library.Models.ViewModels.BookViewModel 
+
+<h2>Edit Books</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+   @*new SelectList(Model.Authors, "ID", "FirstName"
+
+       var model = _context.Books.FirstOrDefault(item => item.ID == id);
+          if (model == null)
+    {
+        model = new Book();
+*@
+
+
+        <div class="form-horizontal">
+           
+            <hr />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Book.ID)
+            @Html.HiddenFor(model => model.Book.CreatedBy)
+            @Html.HiddenFor(model => model.Book.CreatedOn)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Book.Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Book.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book.AuthorID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">                                                                                                                          
+                    @Html.DropDownListFor(model => model.Book.AuthorID, new SelectList(Model.Authors, "ID", "FirstName", new { htmlAttributes = new { @class = "form-control" } }))
+                    @Html.ValidationMessageFor(model => model.Book.AuthorID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book.ISBN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Book.ISBN, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Book.ISBN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book.NumberOfPages, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Book.NumberOfPages, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Book.NumberOfPages, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.ActionLink("Cancel", "Index", null, new {@class="btn btn-default" }) | 
+                    <input type="submit" value="Save" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+
+    
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

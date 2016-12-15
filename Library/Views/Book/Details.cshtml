@@ -1,0 +1,47 @@
+﻿@model Library.Models.Book
+<h2>Book Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        @*https://www.visualstudio.com/downloads/post-install-vs?campaign=ct!!61FD779D4B4A4880AAD8D73C332C9A45*@
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfPages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfPages)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Go Back", "Index", null, new { @class = "btn btn-default" }) |
+    <input type="submit" value="Edit" class="btn btn-warning" />
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @*@Html.ActionLink("Back to List", "Index")*@
+</p>
