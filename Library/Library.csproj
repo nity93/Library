@@ -189,27 +189,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609301620063_initial-create.cs" />
-    <Compile Include="Migrations\201609301620063_initial-create.Designer.cs">
-      <DependentUpon>201609301620063_initial-create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610071828297_Books.cs" />
-    <Compile Include="Migrations\201610071828297_Books.Designer.cs">
-      <DependentUpon>201610071828297_Books.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610141646208_added annotations.cs" />
-    <Compile Include="Migrations\201610141646208_added annotations.Designer.cs">
-      <DependentUpon>201610141646208_added annotations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610211738580_%27migration annotations%27.cs" />
-    <Compile Include="Migrations\201610211738580_%27migration annotations%27.Designer.cs">
-      <DependentUpon>201610211738580_%27migration annotations%27.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611041615217_updatedBookModelbyMistake.cs" />
-    <Compile Include="Migrations\201611041615217_updatedBookModelbyMistake.Designer.cs">
-      <DependentUpon>201611041615217_updatedBookModelbyMistake.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\BaseModel.cs" />
@@ -353,23 +332,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609301620063_initial-create.resx">
-      <DependentUpon>201609301620063_initial-create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610071828297_Books.resx">
-      <DependentUpon>201610071828297_Books.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610141646208_added annotations.resx">
-      <DependentUpon>201610141646208_added annotations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610211738580_%27migration annotations%27.resx">
-      <DependentUpon>201610211738580_%27migration annotations%27.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611041615217_updatedBookModelbyMistake.resx">
-      <DependentUpon>201611041615217_updatedBookModelbyMistake.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
