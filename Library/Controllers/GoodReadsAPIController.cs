@@ -11,6 +11,7 @@ using System.Web.Helpers;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace Library.Controllers
 {
@@ -20,7 +21,7 @@ namespace Library.Controllers
         private const string secret = "VhVDqLudJh9WxCYjvf0PBQU51yAS4vRmD7NXJ9Z3qRw";
 
         //public async Task<JsonResult> GetBook(string title)
-        public async Task<List<GRBook>> GetBook(string title)
+        public async Task<List<Work>> GetBook(string title)
         {
             // HTML enconde the book title so that special characters are converted.
             var bookTitle = HttpUtility.HtmlEncode(title);
@@ -37,17 +38,27 @@ namespace Library.Controllers
             // To convert an XML node contained in string xml into a JSON string   
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(result);
-            var booksnode = doc.SelectSingleNode("//Segment[@Name='search']");
-            var finalnode = booksnode.SelectSingleNode("//Segment[@Name='results']");
-            string jsonText = JsonConvert.SerializeXmlNode(doc["search"]["results"]);
+            var workNodes = doc.GetElementsByTagName("work");
+            List<Work> GRBooks = new List<Work>();
 
-            List<GRBook> GRBooks = JsonConvert.DeserializeObject<List<GRBook>>(jsonText);
+            foreach (XmlNode work in workNodes)
+            {
+                try
+                {
+                    string bid = work.SelectSingleNode("id").InnerText;
+                    string bcount = work.SelectSingleNode("books_count").InnerText;
+                    GRBooks.Add(new Work { Id = bid, books_count = bcount });
+                }
+                catch (Exception ex)
+                {
 
-            var stop = "here";
-            // return the json object
-            //return Json(jsonText);
+                }
+            }
+
             return GRBooks;
         }
+
+        
 
     }
 }
