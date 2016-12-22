@@ -58,11 +58,7 @@ namespace Library.Controllers
             return GRBooks;
         }
 
-        public class Work
-        {
-            public string Id { get; set; }
-            public string books_count { get; set; }
-        }
+        
 
     }
 }
