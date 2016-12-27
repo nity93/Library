@@ -21,6 +21,13 @@
 bld/
 [Bb]in/
 [Oo]bj/
+[Aa]pp_[Dd]ata/
+App_Data/authConfig.json
+App_Data/
+authConfig.json
+[Cc]onfiguration/
+Configuration/authConfig.json
+Configuration/
 
 # Visual Studio 2015 cache/options directory
 .vs/

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using GoodReads.API.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Library.Models.ViewModels
 {
@@ -11,6 +9,8 @@ namespace Library.Models.ViewModels
 
         public List<Author> Authors { get; set; }
 
+        public List<Work> Works { get; set; }
 
+        public List<Book> Books { get; set; }
     }
 }

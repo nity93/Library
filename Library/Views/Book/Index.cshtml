@@ -1,52 +1,83 @@
-﻿@model IEnumerable<Library.Models.Book>
+﻿@model Library.Models.ViewModels.BookViewModel
 
-<h2>Books</h2>
+<section class="row">
+    <article class="col-lg-12">
+        <fieldset>
+            <legend>Books</legend>
 
-<p>
-    @Html.ActionLink("Create New", "Create", null, new {@class="btn btn-primary"})
-</p>
-<table class="table table-bordered table-striped table-hover">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AuthorID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ISBN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumberOfPages)
-            </th>
+        <div class="col-md-2">
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+        </div>
+        <div class="col-lg-5 pull-right">
+            @using (Html.BeginForm("Index", "Book", FormMethod.Get, new { @class = "form-inline" }))
+            {
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Book Title">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            }
+        </div>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Author
+                    </th>
+                    <th>
+                        ISBN
+                    </th>
+                    <th>
+                        Number of Pages
+                    </th>
 
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AuthorID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ISBN)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NumberOfPages)
-                </td>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Books)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AuthorID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ISBN)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumberOfPages)
+                        </td>
 
-                <td>
-                    <a title="Edit" href="@Url.Action("Edit","Book",new { item.ID })"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> |
-                    <a title="Details" href="@Url.Action("Details","Book",new { item.ID })"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a> |
-                    <a title="Delete" href="@Url.Action("Delete","Book",new { item.ID })"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                        <td>
+                            <a title="Edit" href="@Url.Action("Edit", "Book", new { item.ID })"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> |
+                            <a title="Details" href="@Url.Action("Details", "Book", new { item.ID })"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a> |
+                            <a title="Delete" href="@Url.Action("Delete", "Book", new { item.ID })"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+            </fieldset>
+    </article>
+</section>
+<section class="row">
+    <article class="col-lg-12">
+        <fieldset>
+            <legend>See more from GoodReads</legend>
+            @foreach(var work in Model.Works)
+            {
+                <div class="col-md-3">
+                    <h3>@work.Book.Title</h3>
+                    <p>@work.Book.Author.Name</p>
+                    <img src="@work.Book.SmallImageUrl" alt="thumbnail" />
+                </div>
+            }
+        </fieldset>
+    </article>
+</section>
