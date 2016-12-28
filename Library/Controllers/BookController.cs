@@ -24,7 +24,10 @@ namespace Library.Controllers
 
             // create and model to pass to the view.
             // in this case the /Authors/Index view expects a collection of authors.
-            var model = _context.Books.Where(item => item.IsDeleted == false).ToList();
+            var model = GetBooks();
+=======
+            var works = new List<Work>();
+            var books = new List<Library.Models.Book>();
 
             //pass the model to the view like so.
             return View(model);
