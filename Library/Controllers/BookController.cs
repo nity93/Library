@@ -26,20 +26,6 @@ namespace Library.Controllers
        // GET: Book/Index/The Hobbit
         public async Task<ActionResult> Index(string title)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            //var grController = new GoodReadsAPIController();
-
-            //var bookDetails = grController.GetBook("The Hobbit");
-
-            // create and model to pass to the view.
-            // in this case the /Authors/Index view expects a collection of authors.
-            var model = GetBooks();
-=======
-            var works = new List<Work>();
-            var books = new List<Library.Models.Book>();
-
-=======
             var works = new List<Work>();
             var books = new List<Library.Models.Book>();
 
@@ -68,38 +54,7 @@ namespace Library.Controllers
 
             return View(viewModel);
         }
->>>>>>> origin/master
-
-            // if a search, search goodreads api and local repository.
-            // otherwise simply return local repository.
-            if (!string.IsNullOrEmpty(title))
-            {
-                // read authentication information from configuration file.
-                _token = JsonConvert.DeserializeObject<AuthenticationToken>(System.IO.File.ReadAllText(Server.MapPath(configDataLocation)));
->>>>>>> origin/master
-
-                works = await GoodReadsApiInterface.GetBookAsync(title, _token);
-                books = _context.Books.Where(item => item.Title.Contains(title)).ToList();
-            }
-            else
-            {
-                // get local library.
-                books = _context.Books.Where(item => item.IsDeleted == false).ToList();
-            }
-
-            var viewModel = new BookViewModel
-            {
-                Works = works,
-                Books = books
-            };
-
-            return View(viewModel);
-        }
-        public List<Book> GetBooks()
-        {
-            var books = _context.Books.Where(item => item.IsDeleted == false).ToList();
-            return books;
-        }
+       
         // GET: Book/Details/5
         public ActionResult Details(int id)
         {

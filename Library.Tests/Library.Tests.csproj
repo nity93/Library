@@ -96,10 +96,6 @@
   <ItemGroup>
     <Compile Include="GoodReadsClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <Compile Include="BookControllerTest.cs" />
-=======
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
