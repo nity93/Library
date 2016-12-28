@@ -1,9 +1,14 @@
-﻿using Library.Models;
+﻿using GoodReads.API;
+using GoodReads.API.Models;
+using Library.Models;
 using Library.Models.ViewModels;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Library.Controllers
@@ -14,13 +19,17 @@ namespace Library.Controllers
         // get a reference to the database context which contains all information
         // about connecting to and working with the database.
         private static ApplicationDbContext _context = new ApplicationDbContext();
+        private const string configDataLocation = @"~/Configuration/authConfig.json";
 
-        // GET: Book
-        public ActionResult Index()
+        private AuthenticationToken _token;
+
+       // GET: Book/Index/The Hobbit
+        public async Task<ActionResult> Index(string title)
         {
-            var grController = new GoodReadsAPIController();
+<<<<<<< HEAD
+            //var grController = new GoodReadsAPIController();
 
-            var bookDetails = grController.GetBook("The Hobbit");
+            //var bookDetails = grController.GetBook("The Hobbit");
 
             // create and model to pass to the view.
             // in this case the /Authors/Index view expects a collection of authors.
@@ -29,10 +38,37 @@ namespace Library.Controllers
             var works = new List<Work>();
             var books = new List<Library.Models.Book>();
 
-            //pass the model to the view like so.
-            return View(model);
-        }
 
+            // if a search, search goodreads api and local repository.
+            // otherwise simply return local repository.
+            if (!string.IsNullOrEmpty(title))
+            {
+                // read authentication information from configuration file.
+                _token = JsonConvert.DeserializeObject<AuthenticationToken>(System.IO.File.ReadAllText(Server.MapPath(configDataLocation)));
+>>>>>>> origin/master
+
+                works = await GoodReadsApiInterface.GetBookAsync(title, _token);
+                books = _context.Books.Where(item => item.Title.Contains(title)).ToList();
+            }
+            else
+            {
+                // get local library.
+                books = _context.Books.Where(item => item.IsDeleted == false).ToList();
+            }
+
+            var viewModel = new BookViewModel
+            {
+                Works = works,
+                Books = books
+            };
+
+            return View(viewModel);
+        }
+        public List<Book> GetBooks()
+        {
+            var books = _context.Books.Where(item => item.IsDeleted == false).ToList();
+            return books;
+        }
         // GET: Book/Details/5
         public ActionResult Details(int id)
         {
@@ -40,7 +76,7 @@ namespace Library.Controllers
 
             if (model == null)
             {
-                model = new Book();
+                model = new Library.Models.Book();
             }
 
             return View(model);
@@ -58,7 +94,7 @@ namespace Library.Controllers
         [HttpPost]
         public ActionResult Create(BookViewModel model)
         {
-            Book existingBook = null;
+            Library.Models.Book existingBook = null;
             try
             {
                 existingBook = _context.Books.FirstOrDefault(item => item.ISBN.Equals(model.Book.ISBN)); 
@@ -128,7 +164,7 @@ namespace Library.Controllers
                         var book = model.Book;
 
                         //_context.Books.Attach(book);
-                        _context.Set<Book>().AddOrUpdate(book);
+                        _context.Set<Library.Models.Book>().AddOrUpdate(book);
                        //_context.Entry(book).State = EntityState.Modified;
                         _context.SaveChanges();
                     }
@@ -143,20 +179,6 @@ namespace Library.Controllers
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // GET: Book/Delete/5
         public ActionResult Delete(int id)
         {
@@ -164,7 +186,7 @@ namespace Library.Controllers
 
             if (model == null)
             {
-                model = new Book();
+                model = new Library.Models.Book();
             }
 
             return View(model);
