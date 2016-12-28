@@ -336,14 +336,20 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201612221924185_initial create.resx">
       <DependentUpon>201612221924185_initial create.cs</DependentUpon>
     </EmbeddedResource>
 =======
+=======
+>>>>>>> origin/master
     <ProjectReference Include="..\GoodReads.API\GoodReads.API.csproj">
       <Project>{bb51942a-8855-4140-a801-71a6ff264765}</Project>
       <Name>GoodReads.API</Name>
     </ProjectReference>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>

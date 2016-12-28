@@ -27,6 +27,7 @@ namespace Library.Controllers
         public async Task<ActionResult> Index(string title)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             //var grController = new GoodReadsAPIController();
 
             //var bookDetails = grController.GetBook("The Hobbit");
@@ -38,6 +39,36 @@ namespace Library.Controllers
             var works = new List<Work>();
             var books = new List<Library.Models.Book>();
 
+=======
+            var works = new List<Work>();
+            var books = new List<Library.Models.Book>();
+
+
+            // if a search, search goodreads api and local repository.
+            // otherwise simply return local repository.
+            if (!string.IsNullOrEmpty(title))
+            {
+                // read authentication information from configuration file.
+                _token = JsonConvert.DeserializeObject<AuthenticationToken>(System.IO.File.ReadAllText(Server.MapPath(configDataLocation)));
+
+                works = await GoodReadsApiInterface.GetBookAsync(title, _token);
+                books = _context.Books.Where(item => item.Title.Contains(title)).ToList();
+            }
+            else
+            {
+                // get local library.
+                books = _context.Books.Where(item => item.IsDeleted == false).ToList();
+            }
+
+            var viewModel = new BookViewModel
+            {
+                Works = works,
+                Books = books
+            };
+
+            return View(viewModel);
+        }
+>>>>>>> origin/master
 
             // if a search, search goodreads api and local repository.
             // otherwise simply return local repository.
