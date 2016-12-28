@@ -43,21 +43,23 @@ namespace GoodReads.API
             // create a list of works which is what the xml results will be converted to.
             List<Work> Works = new List<Work>();
 
-            // declare variables for xml node values.
-            string bid, bcount, pubDate, numRatings, numReviews, avgRating;
-
-            // instantiate book and author objects to hold required data.
-            Book book = new Book();
-            var author = new Author();
-
-            // declare book and author nodes to be used for parsing.
-            XmlNode bookNode, authorNode;
-
             // iterate over work nodes to and add create a new .NET object, setting values and adding it to the final list.
             foreach (XmlNode work in workNodes)
             {
                 try
                 {
+                    #region Moved declarations inside of loop because when they were outside of the loop, the values were not overridden.
+                    // declare variables for xml node values.
+                    string bid, bcount, pubDate, numRatings, numReviews, avgRating;
+
+                    // instantiate book and author objects to hold required data.
+                    Book book = new Book();
+                    var author = new Author();
+
+                    // declare book and author nodes to be used for parsing.
+                    XmlNode bookNode, authorNode;
+                    #endregion
+
                     // read values into respective variables. concatenate original_publication_... values into a single date string.
                     bid = work.SelectSingleNode("id").InnerText;
                     bcount = work.SelectSingleNode("books_count").InnerText;
