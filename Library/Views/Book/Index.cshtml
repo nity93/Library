@@ -69,12 +69,14 @@
 <section class="row">
     <article class="col-lg-12">
         <fieldset>
-            <legend>See more from GoodReads</legend>
+            @*<legend>See more from GoodReads</legend>*@
             @foreach(var work in Model.Works)
             {
+                var amazonLink = "https://www.amazon.com/s/?url=search-alias%3Dstripbooks&field-keywords=" + @Html.Encode(work.Book.Title);
                 <div class="col-md-3">
                     <h4>@work.Book.Title</h4>
                     <p>@work.Book.Author.Name</p>
+                    <a href="@amazonLink" target="_blank">Purchase on Amazon</a>
                     <img src="@work.Book.SmallImageUrl" alt="thumbnail" />
                 </div>
             }
