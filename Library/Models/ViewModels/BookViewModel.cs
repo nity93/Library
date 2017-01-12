@@ -12,5 +12,6 @@ namespace Library.Models.ViewModels
         public List<Work> Works { get; set; }
 
         public List<Book> Books { get; set; }
+        public Author Author { get; set; }
     }
 }

@@ -14,6 +14,6 @@ namespace Library.Models
         public string ISBN { get; set; }
         [Display(Name ="Number of Pages")]
         public int NumberOfPages { get; set; }
-     
+        public Author Author { get; set; }
     }
 }

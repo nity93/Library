@@ -46,10 +46,21 @@ namespace Library.Controllers
                 books = _context.Books.Where(item => item.IsDeleted == false).ToList();
             }
 
+            // get list of authors.
+            var authors = _context.Authors.Where(item => item.IsDeleted == false).ToList();
+           
+            // attach authors to books.
+            foreach(var book in books)
+            {  
+                book.Author = authors.FirstOrDefault(a => a.ID == book.AuthorID);
+            }
+
             var viewModel = new BookViewModel
             {
                 Works = works,
-                Books = books
+                Books = books,
+                Authors = authors
+                
             };
 
             return View(viewModel);
@@ -73,6 +84,8 @@ namespace Library.Controllers
         {
             var model = new BookViewModel();
             model.Authors = _context.Authors.ToList();
+            model.Authors.Insert(0, new Models.Author { FirstName = "Select", LastName = "Author" });
+
             return View(model);
         }
 
@@ -93,6 +106,25 @@ namespace Library.Controllers
             }
             if (ModelState.IsValid)
             {
+                if(model.Book.AuthorID == 0)
+                {
+                    var Author = new Models.Author();
+                    Author.FirstName = (string.IsNullOrEmpty(model.Author.FirstName)) ? "Unknown" : model.Author.FirstName;
+                    Author.LastName = (string.IsNullOrEmpty(model.Author.LastName)) ? "Unknown" : model.Author.LastName;
+
+                    Author.CreatedBy = User.Identity.Name;
+                    Author.CreatedOn = DateTime.Now;
+                    Author.LastModifiedBy = User.Identity.Name;
+                    Author.LastModifiedOn = DateTime.Now;
+                    Author.IsDeleted = false;
+                   
+
+                    // set AuthorID to new Author
+                    Author = _context.Authors.Add(Author);
+                    _context.SaveChanges();
+                    model.Book.AuthorID = Author.ID;
+                    model.Author = Author;
+                }
                 try
                 {
                     // TODO: Add insert logic here
@@ -119,6 +151,9 @@ namespace Library.Controllers
                 }
             }
             model.Authors = _context.Authors.ToList();
+
+            // add option to authors list
+            model.Authors.Insert(0, new Models.Author { FirstName = "Select", LastName = "Author" });
             return View(model);
         }
 
@@ -127,7 +162,15 @@ namespace Library.Controllers
         {
             var model = new BookViewModel();
             model.Book = _context.Books.FirstOrDefault(item => item.ID == id);
-            model.Authors = _context.Authors.ToList();
+            // get list of authors.
+            var authors = _context.Authors.Where(item => item.IsDeleted == false).ToList();
+
+            // attach authors to books.
+
+            model.Book.Author = authors.FirstOrDefault(a => a.ID == model.Book.AuthorID);
+            model.Authors = authors;
+            model.Author = model.Book.Author;
+
             return View(model);
          } 
 
